@@ -1,16 +1,22 @@
-# Technical Core![算法架构图](fortext/算法架构图.drawio.png)
+# Technical Core<img width="810" height="1061" alt="算法架构图 drawio" src="https://github.com/user-attachments/assets/8fea9fc7-25cf-42ff-b4e0-32b2e06c96c5" />
+
 ## 1. Feature Engineering
 1)Multi-source Spatiotemporal Data Fusion: Integrated 36-dimensional spatial features, including shopping malls, transportation hubs, education, healthcare, and offices, to construct a high-granularity urban functional grid.
-![成果预览](fortext/整体缩略图现有一级预测.png)
-![细节图](fortext/细节图.png)
+<img width="2096" height="1670" alt="整体缩略图现有一级预测" src="https://github.com/user-attachments/assets/96f1bdd5-8bc6-45a5-88b0-fc04d8886883" />
+
+<img width="2468" height="1674" alt="细节图" src="https://github.com/user-attachments/assets/c37b08f6-f8bf-4f76-99ff-fb0046c5ab49" />
+
 2）Proxy Estimation: Addressed the lack of real-time population density in static map data by innovatively introducing the "Proxy Variable Method." Based on public facility allocation logic, the distribution frequency of hospitals and schools was utilized as proxy indicators for population density (Proxy Variables), effectively overcoming the spatial and temporal limitations of statistical data.
 ## 2. Model Selection & Generalization Ability
  (L1 Regularization) Regression was selected as the final model after a cross-comparative analysis of multiple regression algorithms.
-![多种模型对比](fortext/最终效果图.png)
+<img width="1000" height="600" alt="最终效果图" src="https://github.com/user-attachments/assets/9705bf89-c324-4ab0-aeb5-07d971ac331f" />
+
 1） Superior Robustness: The consistent performance between Training R^2 (0.5754) and Testing R^2 (0.5595)—with a gap < 0.02—demonstrates the model's exceptional generalization ability and effective suppression of overfitting.
-![lasso模型验证](fortext/lasso验证图.png)
+<img width="1470" height="600" alt="lasso验证图" src="https://github.com/user-attachments/assets/df7ad5d1-5767-4967-a12d-d0fe88dceaf3" />
+
 2）Dimensionality Reduction & De-noising: Leveraged Lasso’s shrinkage property to successfully extract 10 core contributing factors from 36 redundant features, streamlining the model structure while significantly enhancing the signal-to-noise ratio.
-![多特征权重分析](fortext/权重分析.png)
+<img width="3300" height="2400" alt="权重分析" src="https://github.com/user-attachments/assets/c6fd2ae6-0a85-4c29-bc8d-c6f14bc92282" />
+
 # Key Insights
 ## 3. Top Coefficients
 1)Positive Drivers: Shopping mall density (mall: 0.4135) and bus station proximity (bus_prox: 0.3182) represent the strongest spatial driving forces, validating the core site-selection logic of "traffic gateways" and "commercial clustering."
@@ -20,10 +26,12 @@
 1)Spatial Hit Rate: The top 20% of high-potential grids predicted by the model precisely cover 97.74% of existing store locations, demonstrating high practical utility.
 
 2)Multi-dimensional Spatial Profiling: Conducted comprehensive "spatial health checks" for specific grids (e.g., Site #2760) using Radar Charts (Spider Charts), achieving a quantitative balance between macro-weights and micro-level site attractiveness vs. saturation risk.
-![黄金点位分析图](fortext/雷达图.png) 
+<img width="800" height="800" alt="雷达图" src="https://github.com/user-attachments/assets/3cd7cf12-aac2-4198-a226-681fd2cfe857" />
+
 ## 5. Strategic Recommendations
 1)The model identified 5 "High Potential, Zero Competition" strategic sites across the region. These sites possess high infrastructure scores but currently lack competing brands, representing golden opportunities for market penetration and expansion into emerging business districts.
-![最终选址点](fortext/预测效果最好的一张图.png) 
+<img width="2762" height="1676" alt="预测效果最好的一张图" src="https://github.com/user-attachments/assets/be29e8d8-ee45-4adf-a785-839a3e8e7700" />
+
 ## 6. Limitations & Future Work
 1)Enhancing Spatiotemporal Dynamics: While the current model focuses on static POI attributes, future plans include integrating mobile signaling data or real-time sales from delivery platforms to capture dynamic foot traffic fluctuations.
 
