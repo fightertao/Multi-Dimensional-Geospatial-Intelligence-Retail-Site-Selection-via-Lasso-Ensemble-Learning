@@ -7,7 +7,7 @@
 ## 2. Model Selection & Generalization Ability
  (L1 Regularization) Regression was selected as the final model after a cross-comparative analysis of multiple regression algorithms.
 ![多种模型对比](fortext/最终效果图.png)
-1） Superior Robustness: The consistent performance between Training R^2 (0.5754) and Testing R^2 (0.5595)—with a gap < 0.02—demonstrates the model's exceptional generalization ability and effective suppression of overfitting.
+1） Superior Robustness: The consistent performance between TrainingR² (0.5754) and Testing R²(0.5595)—with a gap < 0.02—demonstrates the model's exceptional generalization ability and effective suppression of overfitting.
 ![lasso模型验证](fortext/lasso验证图.png)
 2）Dimensionality Reduction & De-noising: Leveraged Lasso’s shrinkage property to successfully extract 10 core contributing factors from 36 redundant features, streamlining the model structure while significantly enhancing the signal-to-noise ratio.
 ![多特征权重分析](fortext/权重分析.png)
