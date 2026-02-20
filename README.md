@@ -11,7 +11,7 @@
  (L1 Regularization) Regression was selected as the final model after a cross-comparative analysis of multiple regression algorithms.
 <img width="1000" height="600" alt="最终效果图" src="https://github.com/user-attachments/assets/9705bf89-c324-4ab0-aeb5-07d971ac331f" />
 
-1） Superior Robustness: The consistent performance between Training R^2 (0.5754) and Testing R^2 (0.5595)—with a gap < 0.02—demonstrates the model's exceptional generalization ability and effective suppression of overfitting.
+1） Superior Robustness: The consistent performance between Training R² (0.5754) and TestingR² (0.5595)—with a gap < 0.02—demonstrates the model's exceptional generalization ability and effective suppression of overfitting.
 <img width="1470" height="600" alt="lasso验证图" src="https://github.com/user-attachments/assets/df7ad5d1-5767-4967-a12d-d0fe88dceaf3" />
 
 2）Dimensionality Reduction & De-noising: Leveraged Lasso’s shrinkage property to successfully extract 10 core contributing factors from 36 redundant features, streamlining the model structure while significantly enhancing the signal-to-noise ratio.
